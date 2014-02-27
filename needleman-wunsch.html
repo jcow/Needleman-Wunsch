@@ -2,7 +2,8 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="resources/bootstrap-3.1.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="resources/style.css">
 </head>
 
 <body>
@@ -14,41 +15,65 @@
 		The Needleman-Wunsch algorithm is utilized to perform a global alignment on two sequences.  In this project, this algorithm was used to align two nucleotide sequences.
 	</p>
 		<h2>String Inputs</h2>
-	<table>
-		<thead></thead>
-		<tbody>
-			<tr>
-				<td><label>String1</label></td>
-				<td><input id="string1"/></td>
-			</tr>
-			<tr>
-				<td><label>String2</label></td>
-				<td><input id="string2"/></td>
-			</tr>
-			<tr>
-				<td><label>Match Reward</label></td>
-				<td><input id="match_reward" value="1"></td>
-			</tr>
-			<tr>
-				<td><label>Gap Penalty</label></td>
-				<td><input id="gap_penalty" value="-1"/></td>
-			</tr>
-			<tr>
-				<td><label>Mismatch Penalty</label></td>
-				<td><input id="mismatch_penalty" value="0"/></td>
-			</tr>
-		</tbody>
-	</table>
+		
+		
+	<form class="form-horizontal" role="form" onsubmit="return false;">
+		<div class="form-group">
+			<label for="string1" class="col-sm-2 control-label">First Sequence</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="string1" placeholder="First Sequence">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="string2" class="col-sm-2 control-label">Second Sequence</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="string2" placeholder="Second Sequence">
+			</div>
+		</div>
+	  
+		<div class="form-group">
+			<label for="match_reward" class="col-sm-2 control-label">Match Reward</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="match_reward" placeholder="Match Reward" value="1">
+			</div>
+		</div>
+		  
+		<div class="form-group">
+			<label for="gap_penalty" class="col-sm-2 control-label">Gap Penalty</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="gap_penalty" placeholder="Gap Penalty" value="-1">
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label for="mismatch_penalty" class="col-sm-2 control-label">Mismatch Penalty</label>
+			<div class="col-sm-10">
+				<input class="form-control" id="mismatch_penalty" placeholder="Mismatch Penalty" value="0">
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" id="example"/> Example
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button id="gogogo" class="btn btn-default">GO!</button>
+			</div>
+		</div>
+	</form>
 
-	<div><button id="gogogo">Go!</button></div>
-	<div><label for="example">Example</label><input type="checkbox" id="example"/></div>
-
+	<h2>Alignment Results</h2>
 	<div id="results">
-		<h2>Results</h2>
 		<p>No Results</p>
 	</div>
 </div>
-<script type="text/javascript" src="nw.js"></script>
+<script type="text/javascript" src="resources/nw.js"></script>
 </body>
 
 

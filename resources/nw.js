@@ -64,7 +64,7 @@ var doNW = function(string1, string2){
 
 	// dump the results
 	var dump_to = document.getElementById('results')
-	var html = '<table class="res_table"><thead></thead><tbody id="results_table_body">'
+	var html = '<h3>Alignment Table</h3><table class="table table-bordered res_table"><thead></thead><tbody id="results_table_body">'
 	for(var i = 0; i < string2.length+2; i++){
 		html += '<tr>'
 		for(var j = 0; j < string1.length+2;j++){
@@ -85,7 +85,7 @@ var doNW = function(string1, string2){
 		html += '</tr>'
 	}
 	html += '</tbody></table>'
-	html += '<h3>Alignment Score: '+final_array[final_array.length-1][final_array[0].length-1]+'</h3>'
+	html += '<div class="text-right"><strong>Alignment Score: '+final_array[final_array.length-1][final_array[0].length-1]+'</strong></div>'
 	dump_to.innerHTML = html
 
 	// show the bread crumbs and get the alignment strings
@@ -126,8 +126,8 @@ var doNW = function(string1, string2){
 	var algn1 = alignment1.split('')
 	var algn2 = alignment2.split('')
 	var align_html = ''
-	align_html += '<h3>String Alignment</h3>'
-	align_html += '<table class="res_table"><thead></thead><tbody>'
+	align_html += '<h3>Alignment String</h3>'
+	align_html += '<table class="table table-bordered res_table"><thead></thead><tbody>'
 	align_html += '<tr>'
 	for(var i = 0; i < algn1.length; i++){
 		align_html += '<td>'+algn1[i]+'</td>'
